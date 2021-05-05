@@ -1,0 +1,51 @@
+﻿@model IEnumerable<VidyaCat2.Models.PlatformListItem>
+
+@{
+    ViewBag.Title = "IndexByBrand";
+}
+
+<h2>IndexByBrand</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlatformName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="activeFilter">
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.ActionLink($"{item.PlatformName}", "Details", "Platform", new { id = item.PlatformID }, htmlAttributes: new { @class = "indexLink" })
+        </td>
+        <td>
+            @Html.ActionLink($"{item.ReleaseDate.ToShortDateString()}", "IndexByYear", "Platform", new { year = item.ReleaseDate.Year }, htmlAttributes: new { @class = "indexLink" })
+        </td>
+        <td>
+            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Platform", new { status = item.IsCurrent }, htmlAttributes: new { @class = "indexLink" })
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlatformID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlatformID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlatformID })
+        </td>
+    </tr>
+}
+
+</table>

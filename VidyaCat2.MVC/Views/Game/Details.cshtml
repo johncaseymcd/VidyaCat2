@@ -1,0 +1,90 @@
+﻿@model VidyaCat2.Models.GameDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GameDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GameTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.ActionLink($"{Model.ReleaseDate.ToShortDateString()}", "IndexByYear", "Game", new { year = Model.ReleaseDate.Year }, htmlAttributes: new { @class = "indexLink" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.ActionLink($"{Model.Genre}", "IndexByGenre", "Game", new { genre = Model.Genre }, htmlAttributes: new { @class = "indexLink" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstSubgenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstSubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondSubgenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondSubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdSubgenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdSubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.ActionLink($"{Model.RatingName}", "IndexByRating", "Game", new { rating = Model.Rating }, htmlAttributes: new { @class = "indexLink" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform.PlatformName)
+        </dt>
+
+        <dd>
+            @Html.ActionLink($"{Model.Platform.PlatformName}", "Details", "Platform", new { id = Model.PlatformID }, htmlAttributes: new { @class = "indexLink" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Developer.DeveloperName)
+        </dt>
+
+        <dd>
+            @Html.ActionLink($"{Model.Developer.DeveloperName}", "Details", "Developer", new { id = Model.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<VidyaCat2.Models.GameListItem>
+
+@{
+    ViewBag.Title = "IndexByYear";
+}
+
+<h2>IndexByYear</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GameTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Platform.PlatformName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Developer.DeveloperName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink($"{item.GameTitle}", "Details", "Game", new { id = item.GameID }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td class="activeFilter">
+                @{ string releaseDate = item.ReleaseDate.ToString("d"); }
+                @Html.DisplayFor(modelItem => releaseDate)
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Genre}", "IndexByGenre", "Game", new { genre = item.Genre }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.RatingName}", "IndexByRating", "Game", new { rating = item.Rating }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Platform.PlatformName}", "Details", "Platform", new { id = item.PlatformID }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Developer.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GameID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+            </td>
+        </tr>
+    }
+
+</table>
