@@ -9,9 +9,11 @@ namespace VidyaCat2.Data
 {
     public enum Region
     {
+        [Display(Name = "North America")]
         North_America = 1,
         Asia,
         Europe,
+        [Display(Name = "South America")]
         South_America,
         Africa,
         Australia,
