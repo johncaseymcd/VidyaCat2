@@ -12,6 +12,7 @@ namespace VidyaCat2.Models
     {
         [Key]
         public int GameID { get; set; }
+        [Display(Name = "Game Title")]
         public string GameTitle { get; set; }
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
