@@ -1,13 +1,12 @@
 ﻿@model VidyaCat2.Models.PlatformDetail
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Platform - Details";
 }
 
-<h2>Details</h2>
+<h2 class="pageHeader">Platform Info</h2>
 
 <div>
-    <h4>PlatformDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,6 +52,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PlatformID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlatformID }, htmlAttributes: new { @class = "editButton" })
+    <br /><br />
+    @Html.ActionLink("Back to List", "Index", "", htmlAttributes: new { @class = "bottomLinks" })
 </p>

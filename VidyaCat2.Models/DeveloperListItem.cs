@@ -12,6 +12,7 @@ namespace VidyaCat2.Models
     {
         [Key]
         public int DeveloperID { get; set; }
+        [Display(Name = "Developer Name")]
         public string DeveloperName { get; set; }
         public Region Region { get; set; }
         public string RegionName

@@ -12,6 +12,7 @@ namespace VidyaCat2.Models
     {
         [Key]
         public int DeveloperID { get; set; }
+        [Display(Name = "Developer Name")]
         public string DeveloperName { get; set; }
         public Region Region { get; set; }
         public string RegionName
@@ -23,6 +24,7 @@ namespace VidyaCat2.Models
         }
         public bool IsMajor { get; set; }
         public bool IsActive { get; set; }
+        [Display(Name = "Games Developed")]
         public int GamesDeveloped { get; set; }
 
         public string Type

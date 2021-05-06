@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - VidyaCat</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Styles/custom.css")
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,7 +33,7 @@
         </div>
     </div>
 
-    <div id="sidebar">
+    <div id="sidebar" class="col-lg-2">
         <ul class="sidebarMenu">
             <li class="sidebarLink">@Html.ActionLink("Games", "Index", "Game")</li>
             <li class="sidebarLink">@Html.ActionLink("Developers", "Index", "Developer")</li>
@@ -41,7 +44,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer id="footer">
             <p>&copy; @DateTime.Now.Year - Casey McDonough</p>
         </footer>
     </div>

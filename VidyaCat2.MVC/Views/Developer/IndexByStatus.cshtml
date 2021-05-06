@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<VidyaCat2.Models.DeveloperListItem>
 
 @{
-    ViewBag.Title = "IndexByStatus";
+    ViewBag.Title = "Developers - Status";
 }
 
-<h2>IndexByStatus</h2>
+    <h2 class="pageHeader">Developers by Status</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "", new { @class = "createButton" })
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" })
         </td>
     </tr>
 }

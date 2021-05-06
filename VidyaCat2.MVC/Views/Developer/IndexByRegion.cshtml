@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<VidyaCat2.Models.DeveloperListItem>
 
 @{
-    ViewBag.Title = "IndexByRegion";
+    ViewBag.Title = "Developers - Region";
 }
 
-<h2>IndexByRegion</h2>
+<h2 class="pageHeader">Developers by Region</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "", new { @class = "createButton" })
 </p>
 <table class="table">
     <tr>
@@ -23,7 +23,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
-        <th></th>
+        <th>Actions</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -41,9 +41,9 @@
             @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { status = item.IsActive }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" })
         </td>
     </tr>
 }

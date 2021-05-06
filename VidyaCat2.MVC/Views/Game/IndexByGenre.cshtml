@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<VidyaCat2.Models.GameListItem>
 
 @{
-    ViewBag.Title = "IndexByGenre";
+    ViewBag.Title = "Games - Genre";
 }
 
-<h2>IndexByGenre</h2>
+<h2 class="pageHeader">Games by Genre</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "", htmlAttributes: new { @class = "createButton" })
 </p>
 <table class="table">
     <tr>
@@ -54,9 +54,9 @@
                 @Html.ActionLink($"{item.Developer.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.GameID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameID }, htmlAttributes: new { @class = "eddLinks" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GameID }, htmlAttributes: new { @class = "eddLinks" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GameID }, htmlAttributes: new { @class = "eddLinks" })
             </td>
         </tr>
     }

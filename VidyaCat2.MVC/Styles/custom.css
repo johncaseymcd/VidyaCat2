@@ -1,0 +1,153 @@
+﻿body {
+    background-color: rgba(167,167,167,.3);
+    color: #000;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+#sidebar{
+    padding-top: 25px;
+    height: 100%;
+    width: 250px;
+    float: left;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.sidebarMenu{
+    background-color: #000;
+    padding: 50px 75px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.sidebarLink a{
+    display: block;
+    font-size: 36px;
+    transform: rotate(-90deg);
+    margin-top: 175px;
+    color: #0f0;
+}
+
+.sidebarLink a:hover{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.sidebarLink:first-child{
+    margin-top: 100px;
+}
+
+@media screen and (max-height: 450px){
+    #sidebar{padding-top: 15px;}
+    .sidebarLink a{font-size: 24px;}
+}
+
+.container{
+    margin-left: 400px;
+}
+
+#footer{
+    margin: auto;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+}
+
+.blogTitle{
+    text-align: left;
+}
+
+.byline{
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.sectionHeader{
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    font-weight: bold;
+    color: #0f0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.consoleTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pageHeader{
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.createButton{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: #0f0;
+    border-radius: 10px;
+}
+
+.deleteButton {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: #de0000;
+    border-radius: 10px;
+}
+
+.editButton {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: #dede00;
+    border-radius: 10px;
+}
+
+.indexLink{
+    color: #000;
+    text-decoration: none;
+}
+
+.indexLink:hover{
+    color: #007800;
+    text-decoration: none;
+}
+
+.activeFilter{
+    color: #555;
+}
+
+.eddLinks, .bottomLinks{
+    color: #007800;
+    text-decoration: none;
+}
+
+.eddLinks:hover, .bottomLinks:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.confirmation {
+    color: #de0000;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}

@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<VidyaCat2.Models.DeveloperListItem>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Developers";
 }
 
-<h2>Index</h2>
+<h2 class="pageHeader">Developers</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "", new { @class = "createButton" })
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -26,26 +27,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
-        </td>
-        <td>
-            @Html.ActionLink($"{item.RegionName}", "IndexByRegion", "Developer", new { region = item.Region }, htmlAttributes: new { @class = "indexLink" })
-        </td>
-        <td>
-            @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { type = item.IsMajor }, htmlAttributes: new { @class = "indexLink" })
-        </td>
-        <td>
-            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { status = item.IsActive }, htmlAttributes: new { @class = "indexLink" })
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DeveloperID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DeveloperID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.RegionName}", "IndexByRegion", "Developer", new { region = item.Region }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { type = item.IsMajor }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { status = item.IsActive }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DeveloperID }, htmlAttributes: new { @class = "eddLinks" })
+            </td>
+        </tr>
+    }
 </table>
+
