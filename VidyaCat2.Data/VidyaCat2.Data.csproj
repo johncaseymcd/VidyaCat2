@@ -60,21 +60,9 @@
     <Compile Include="Developer.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202105042221584_ThreeSeed.cs" />
-    <Compile Include="Migrations\202105042221584_ThreeSeed.Designer.cs">
-      <DependentUpon>202105042221584_ThreeSeed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105042237102_Update.cs" />
-    <Compile Include="Migrations\202105042237102_Update.Designer.cs">
-      <DependentUpon>202105042237102_Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105050110548_DateTimeFix.cs" />
-    <Compile Include="Migrations\202105050110548_DateTimeFix.Designer.cs">
-      <DependentUpon>202105050110548_DateTimeFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105060330181_Azure.cs" />
-    <Compile Include="Migrations\202105060330181_Azure.designer.cs">
-      <DependentUpon>202105060330181_Azure.cs</DependentUpon>
+    <Compile Include="Migrations\202111102305325_WorkDammit.cs" />
+    <Compile Include="Migrations\202111102305325_WorkDammit.designer.cs">
+      <DependentUpon>202111102305325_WorkDammit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
@@ -85,17 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105042221584_ThreeSeed.resx">
-      <DependentUpon>202105042221584_ThreeSeed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042237102_Update.resx">
-      <DependentUpon>202105042237102_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105050110548_DateTimeFix.resx">
-      <DependentUpon>202105050110548_DateTimeFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105060330181_Azure.resx">
-      <DependentUpon>202105060330181_Azure.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111102305325_WorkDammit.resx">
+      <DependentUpon>202111102305325_WorkDammit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

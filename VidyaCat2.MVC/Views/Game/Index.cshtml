@@ -48,10 +48,10 @@
                 @Html.ActionLink($"{item.RatingName}", "IndexByRating", "Game", new { rating = item.Rating }, htmlAttributes: new { @class = "indexLink" })
             </td>
             <td>
-                @Html.ActionLink($"{item.Platform.PlatformName}", "Details", "Platform", new { id = item.PlatformID }, htmlAttributes: new { @class = "indexLink" })
+                @Html.ActionLink($"{item.Platform.PlatformName}", "Details", "Platform", new { id = item.PlatformID }, htmlAttributes: new { @class = "indexLink" }) 
             </td>
             <td>
-                @Html.ActionLink($"{item.Developer.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
+                @Html.ActionLink($"{item.Developer.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" }) 
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.GameID }, htmlAttributes: new { @class = "eddLinks" }) |
